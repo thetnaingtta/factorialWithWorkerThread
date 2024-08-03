@@ -13,7 +13,14 @@ const calculateFactorial = (number) => {
     } 
 }
 
+const factorial = (n) => {
+  if (n === 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+
 console.time('Calculated in')
-const result = calculateFactorial(BigInt(10));
+const result = calculateFactorial(BigInt(100));
 console.log(result);
 console.timeEnd('Calculated in')
